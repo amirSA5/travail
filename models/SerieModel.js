@@ -1,6 +1,6 @@
 const mongoose = require ('mongoose');
 
-const attributSchema = new mongoose.Schema ({
+const serieSchema = new mongoose.Schema ({
   Nom: {
     type: String,
     required: true,
@@ -9,10 +9,10 @@ const attributSchema = new mongoose.Schema ({
     sparse: true,
   },
 
-  serie: {
+  sousArticle: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'serieSchema',
+    ref: 'sousArticleSchema',
   },
 });
 
-module.exports = mongoose.model ('Attribut', attributSchema);
+module.exports = mongoose.model ('serieSchema', serieSchema);
